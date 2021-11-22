@@ -4,15 +4,16 @@ import SingleClolor from './singleClolor';
 function App() {
   const [color, setColor] = useState('');
   const [error, setError] = useState(false);
-  const [list, setList] = useState([]);
+  const [list, setList] = useState(new Values('#f15025').all(10));
   const handleSubmit = (e) => {
     e.preventDefault();
 
     try {
       let colors = new Values(color).all(10);
+      setList(colors);
       console.log(colors);
     } catch (error) {
-      setError(error);
+      setError(true);
       console.log(error);
     }
   };
@@ -34,7 +35,11 @@ function App() {
           </button>
         </form>
       </section>
-      <section className='colors'></section>
+      <section className='colors'>
+        {list.map((color, index) => {
+          return <SingleClolor key={index} index={index} {...color} />;
+        })}
+      </section>
     </>
   );
 }
