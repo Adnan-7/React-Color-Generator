@@ -1,4 +1,4 @@
-# React-Color-Generator
+## React-Color-Generator
 
 
 # Getting Started with Create React App
