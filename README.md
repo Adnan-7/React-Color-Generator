@@ -1,4 +1,5 @@
-## React-Color-Generator
+## React-Color-Generator: [Demo](https://react-proj-color-generator.netlify.app/)
+
 
 
 # Getting Started with Create React App
